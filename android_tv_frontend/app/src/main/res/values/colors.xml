@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TV optimized colors -->
-    <color name="tv_background">#000000</color>
-    <color name="tv_overlay">#CC000000</color>
-    <color name="tv_primary">#FFFFFF</color>
-    <color name="tv_secondary">#CCCCCC</color>
-    <color name="tv_accent">#2196F3</color>
-    <color name="tv_button_focused">#FFFFFF</color>
-    <color name="tv_button_normal">#80FFFFFF</color>
+    <!-- Ocean Professional Palette -->
+    <color name="op_primary">#2563EB</color> <!-- Blue -->
+    <color name="op_secondary">#F59E0B</color> <!-- Amber -->
+    <color name="op_error">#EF4444</color>
+    <color name="op_background">#0C111A</color> <!-- Deep ocean background for TVs -->
+    <color name="op_surface">#111827</color>   <!-- Surface card -->
+    <color name="op_text_primary">#FFFFFF</color>
+    <color name="op_text_secondary">#D1D5DB</color>
+
+    <!-- Legacy references for compatibility -->
+    <color name="tv_background">@color/op_background</color>
+    <color name="tv_overlay">#8A000000</color>
+    <color name="tv_primary">@color/op_text_primary</color>
+    <color name="tv_secondary">@color/op_text_secondary</color>
+    <color name="tv_accent">@color/op_primary</color>
+    <color name="tv_button_focused">@color/op_secondary</color>
+    <color name="tv_button_normal">#66FFFFFF</color>
+
+    <!-- Shadows -->
+    <color name="shadow_ambient">#33000000</color>
+    <color name="shadow_key">#66000000</color>
 </resources>

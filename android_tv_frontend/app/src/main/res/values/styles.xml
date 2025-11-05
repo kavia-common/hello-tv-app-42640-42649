@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme for Android TV -->
+    <!-- Ocean Professional Leanback Theme -->
     <style name="AppTheme" parent="Theme.Leanback">
-        <!-- Customize your theme here -->
-        <item name="android:windowBackground">@color/tv_background</item>
-        <item name="android:colorPrimary">@color/tv_accent</item>
+        <item name="android:windowBackground">@color/op_background</item>
+        <item name="android:colorPrimary">@color/op_primary</item>
+        <item name="android:colorAccent">@color/op_secondary</item>
+        <item name="android:navigationBarColor">@color/op_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Typography -->
+    <style name="Text.Hero">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/op_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.Subtitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/op_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Card container style with rounded corners and shadow -->
+    <style name="Card.Surface">
+        <item name="android:background">@color/op_surface</item>
+        <item name="android:padding">32dp</item>
+    </style>
+
+    <!-- Focus outline effect for TV -->
+    <style name="FocusableView">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
     </style>
 </resources>

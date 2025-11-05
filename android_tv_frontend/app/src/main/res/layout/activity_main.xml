@@ -4,32 +4,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="@color/op_background">
 
-    <TextView
-        android:id="@+id/title_text"
+    <!-- Overscan-safe guidelines (8% on each side) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="android_tv_frontend"
-        android:textSize="48sp"
-        android:textColor="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <!-- Center card surface -->
+    <LinearLayout
+        android:id="@+id/card"
+        style="@style/Card.Surface"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/op_surface_card_bg"
+        android:contentDescription="@string/hello_tv"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintWidth_min="480dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5">
 
-    <TextView
-        android:id="@+id/subtitle_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ready for rating screen integration"
-        android:textSize="24sp"
-        android:textColor="#CCCCCC"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_text" />
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/Text.Hero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_tv"
+            android:shadowColor="@color/shadow_key"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="6" />
+
+        <TextView
+            android:id="@+id/subtitle_text"
+            style="@style/Text.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hello_tv_subtitle" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
